@@ -42,7 +42,7 @@ class User < ApplicationRecord
     favorite.destroy if favorite
   end
   
-  def likes?(micropost)
-    self.likes
+  def likes?(liked_micropost)
+    self.likes.include?(liked_micropost)
   end
 end
